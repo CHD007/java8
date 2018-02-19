@@ -1,5 +1,7 @@
 package com.chernyshov777.java8inaction.dishes;
 
+import com.chernyshov777.java8inaction.oreilly.Test;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -32,5 +34,16 @@ public class DishesMain {
                 .collect(toList());
         System.out.println(names);
 
+        Test helloTest = new Test() {
+            @Override
+            public void test() {
+                System.out.println("hello test");
+            }
+        };
+
+        Test lambdaTest = () -> System.out.println("hell lambda test");
+
+        helloTest.test();
+        lambdaTest.test();
     }
 }
