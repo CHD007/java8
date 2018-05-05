@@ -3,8 +3,11 @@ package com.chernyshov777;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class CastsTest {
+    private static Logger LOGGER = Logger.getLogger(CastsTest.class.getName());
 
     public static void main(String[] args) {
         CastsTest castsTest = new CastsTest();
@@ -42,9 +45,8 @@ public class CastsTest {
         try {
             String string = list.get(0); // ClassCastException
         } catch (ClassCastException exception) {
-            System.out.println("When we retrieve elements from that list we expect Strings, but in fact we receive Dates" +
-                    "and a ClassCastException occur");
-            exception.printStackTrace();
+            LOGGER.log(Level.SEVERE, "When we retrieve elements from that list we expect Strings, but in fact we receive Dates"
+                    +  "and a ClassCastException occur", exception);
         }
     }
 }
