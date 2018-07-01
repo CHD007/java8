@@ -1,7 +1,8 @@
 package com.chernyshov777.java8inaction;
 
-import java.util.Arrays;
-import java.util.List;
+import com.sun.org.apache.xpath.internal.operations.String;
+
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;

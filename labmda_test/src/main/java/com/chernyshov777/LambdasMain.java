@@ -17,12 +17,6 @@ public class LambdasMain {
                 new Person("Matthew", "Arnold", 39)
         );
 
-        for (Person person : people) {
-            if (person.getAge() == 42) {
-                people.remove(person);
-            }
-        }
-
         //Step 1: Sort list by last name
     
         Collections.sort(people, Comparator.comparing(Person::getLastName));
