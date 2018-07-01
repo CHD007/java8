@@ -7,13 +7,13 @@ public class SortsMain {
         IntGenerator intGenerator = new IntGenerator();
         int[] ints = intGenerator.randomInts(10000);
 
-        printArray(ints);
+//        printArray(ints);
 
 
         System.out.println("bubble sort time: " + sort(new BubbleSort(), ints));
         System.out.println("selection sort time: " + sort(new SelectionSort(), ints));
         System.out.println("merge sort time: " + sort(new MergeSort(), ints));
-
+        System.out.println("quick sort time: " + sort(new QuickSort(), ints));
     }
 
     private static void printArray(int[] a) {
